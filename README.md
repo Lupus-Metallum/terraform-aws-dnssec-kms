@@ -7,14 +7,14 @@ Used to create a DNSSEC compliant KMS key. Thought is that this alleviates creat
 ``` Terraform
 module "dnssec_key" {
   source   = "Lupus-Metallum/dnssec-kms/aws"
-  version  = "1.0.0"
+  version  = "1.0.3"
   
   name     = "my-dnssec-key"
 }
 
 module "my_dnssec_zone" {
   source   = "Lupus-Metallum/r53-zone/aws"
-  version  = "1.0.9"
+  version  = "1.0.11"
   
   domain_name      = "example.com"
   kms_key_arn      = module.dnssec_key.key_arn
