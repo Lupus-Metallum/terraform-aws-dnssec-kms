@@ -1,12 +1,12 @@
 variable "name" {
   description = "Name to use for Key and Key Alias"
-  type = string
+  type        = string
 }
 
 variable "description" {
   description = "Description to use for KMS key"
-  type = string
-  default = "Used to sign dnssec records"
+  type        = string
+  default     = "Used to sign dnssec records"
 }
 
 variable "deletion_window_days" {
